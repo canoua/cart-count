@@ -1,4 +1,5 @@
 <template>
+  <h1>Выдача клиенту</h1>
   <section class="home-section">
     <form class="home-form" :class="form.class" action="#">
       <input class="home-input" type="text" placeholder="штрихкод картриджа">
@@ -10,21 +11,27 @@
           </template>
         </select>
       </div>
+      <input type="file">
       <input class="home-input" type="text" placeholder="номер кабинета">
       <input class="home-input" type="text" placeholder="инвентарный номер принтера/МФУ">
-      <input class="home-input" type="date">
+      <!-- <input class="home-input" type="date"> -->
+      <p>{{ dateNow }}</p>
       <button class="home-btn" type="submit">добавить</button>
+      <a href="#">посмотреть список картриджей ожидающих заправку</a>
     </form>
+    
   </section>
 </template>
 
 <script>
+  const dateNow = new Date();
   export default {
     data() {
       return {
         form: {
           class: 'form'
         },
+        dateNow: dateNow,
         models: [
           {id: 1, title: '728'},
           {id: 2, title: '725'},
@@ -77,5 +84,6 @@
     margin: 0 auto;
     border: 1px solid #000;
     border-radius: 10px;
+    margin-bottom: 10px;
   }
 </style>
