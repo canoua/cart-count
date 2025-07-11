@@ -11,13 +11,11 @@
           </template>
         </select>
       </div>
-      <input type="file">
+      <!-- <input type="file"> -->
       <input class="home-input" type="text" placeholder="номер кабинета">
       <input class="home-input" type="text" placeholder="инвентарный номер принтера/МФУ">
-      <!-- <input class="home-input" type="date"> -->
       <p>{{ dateNow }}</p>
-      <button class="home-btn" type="submit">добавить</button>
-      <a href="#">посмотреть список картриджей ожидающих заправку</a>
+      <button class="home-btn" type="submit">выдать</button>
     </form>
     
   </section>
@@ -37,9 +35,6 @@
           {id: 2, title: '725'},
           {id: 3, title: '703'},
         ],
-        styles: {
-
-        }
       }
     }
   }

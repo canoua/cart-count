@@ -1,6 +1,6 @@
 <template>
   <h2>Добавить картридж в базу данных</h2>
-  <form action="#">
+  <form class="form" action="#">
     <div class="home-form__model">
       <label for="model">Модель картриджа</label>
       <select name="model" id="model" >
@@ -8,6 +8,7 @@
           <option :value="model.id">{{ model.title }}</option>
         </template>
       </select>
+      <input type="text" placeholder="штрихкод">
     </div>
     <button class="home-btn" type="submit">добавить</button>
   </form>
@@ -15,9 +16,16 @@
 
 <script>
   export default { 
-    data() {
-      return
-    }
+    
   }
-  
 </script>
+
+<style scoped>
+  .form {
+    width: 600px;
+  }
+  .home-form__model {
+    display: flex;
+    flex-direction: column;
+  }
+</style>
