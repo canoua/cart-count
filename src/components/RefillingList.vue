@@ -1,5 +1,10 @@
-<template>
-  <h2>список заправок</h2>
+<template> 
+  <div class="section">
+    <div class="form">
+      <h2>Список заправок</h2>
+    </div>
+  </div>
+  
 </template>
 
 <script>

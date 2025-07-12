@@ -1,12 +1,12 @@
 <template>
-  <div>
-    <a href="#/">HomeView</a> |
-    <a href="#/cartlistview">Список картриджей, ожидающих заправку</a> |
-    <a href="#/adddatabaseview">Добавить картридж в БД</a> |
-    <a href="#/refillinglistview">Список заправок</a> |
-    <a href="#/cartlistallview">Список ВСЕХ картриджей</a> |
-    <component :is="currentView" />
+  <div class="menu">
+    <a class="menu__link" href="#/">Выдача клиенту</a> 
+    <a class="menu__link" href="#/cartlistview">Список картриджей, ожидающих заправку</a> 
+    <a class="menu__link" href="#/adddatabaseview">Добавить картридж в БД</a> 
+    <a class="menu__link" href="#/refillinglistview">Список заправок</a> 
+    <a class="menu__link" href="#/cartlistallview">Список ВСЕХ картриджей</a> 
   </div>
+   <component :is="currentView" />
 </template>
 
 <script setup>
@@ -36,5 +36,17 @@
 </script>
 
 <style scoped>
+  .menu {
+    background-color: #0066FF;
+    display: flex;
+    justify-content: center;
+  }
 
+  .menu__link {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    display: inline-block;
+    font-size: 20px;
+  }
 </style>
