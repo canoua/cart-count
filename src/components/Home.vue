@@ -2,8 +2,7 @@
   <section class="section">
     <form class="form form-home" action="#">
       <h1>Выдача клиенту</h1>
-      <input class="form-input" type="text" placeholder="штрихкод картриджа">
-      <div class="home-form__model">
+      <div class="form__model">
         <label for="model">Модель картриджа</label>
         <select name="model" id="model">
           <template v-for="model in models">
@@ -11,6 +10,7 @@
           </template>
         </select>
       </div>
+      <input class="form-input" type="text" placeholder="штрихкод">
       <input class="form-input" type="text" placeholder="номер кабинета">
       <input class="form-input" type="text" placeholder="инвентарный номер принтера/МФУ">
       <button class="form-btn" type="submit">выдать</button>
@@ -33,10 +33,5 @@
 </script>
 
 <style scoped>
-  .home-form__model {
-    margin-bottom: 20px;
-    width: 100%; 
-    display: flex; 
-    justify-content: space-between;
-  }
+  
 </style>

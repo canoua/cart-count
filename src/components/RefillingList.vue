@@ -4,7 +4,6 @@
       <h2>Список заправок</h2>
     </div>
   </div>
-  
 </template>
 
 <script>

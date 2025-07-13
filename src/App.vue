@@ -1,10 +1,11 @@
 <template>
   <div class="menu">
-    <a class="menu__link" href="#/">Выдача клиенту</a> 
-    <a class="menu__link" href="#/cartlistview">Список картриджей, ожидающих заправку</a> 
+    <a class="menu__link" href="#/">Выдача</a> 
+    <a class="menu__link" href="#/refundview">Возврат</a> 
     <a class="menu__link" href="#/adddatabaseview">Добавить картридж в БД</a> 
-    <a class="menu__link" href="#/refillinglistview">Список заправок</a> 
-    <a class="menu__link" href="#/cartlistallview">Список ВСЕХ картриджей</a> 
+    <a class="menu__link" href="#/cartlistallview">База данных</a> 
+    <a class="menu__link" href="#/cartlistview">Картриджи, ожидающие заправку</a> 
+    <a class="menu__link" href="#/refillinglistview">Заправки</a> 
   </div>
    <component :is="currentView" />
 </template>
@@ -15,13 +16,15 @@
   import CartListView from './views/CartListView.vue';
   import RefillingListView from './views/RefillingListView.vue';
   import CartListAllView from './views/CartListAllView.vue';
+  import RefundView from './views/RefundView.vue';
   import { ref, computed } from 'vue'
    const routes = {
     '/': HomeView,
     '/adddatabaseview': AddDataBaseView,
     '/cartlistview': CartListView,
     '/refillinglistview': RefillingListView,
-    '/cartlistallview': CartListAllView
+    '/cartlistallview': CartListAllView,
+    '/refundview': RefundView
   }
 
   const currentPath = ref(window.location.hash)
