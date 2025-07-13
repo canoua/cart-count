@@ -1,5 +1,5 @@
 <template>
-   <AddDataBase />
+  <AddDataBase />
 </template>
 
 <script>

@@ -40,16 +40,20 @@
 
 <style scoped>
   .menu {
-    background-color: #0066FF;
+    background-color: #fff;
+    /* background-color: #0066FF; */
     display: flex;
     justify-content: center;
+    padding: 10px 0;
+    box-shadow: 0px 2px 39px 13px rgba(205, 199, 255, 0.19);
   }
 
   .menu__link {
-    color: #fff;
+    /* color: #fff; */
     text-decoration: none;
     padding: 10px;
     display: inline-block;
     font-size: 20px;
+    color: #000;
   }
 </style>

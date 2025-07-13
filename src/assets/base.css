@@ -16,23 +16,44 @@ button {
   border: transparent;
   border-radius: 5px;
   text-transform: uppercase;
+  font-family: "Open Sans", sans-serif;
+}
+
+input {
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  /* Chrome 10-25, Safari 5.1-6 */
+  /* background: -webkit-linear-gradient(90deg, #ffffff,#d8d6ff,#a296fd); */
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */                          
+  /* background: linear-gradient(90deg, #ffffff,#d8d6ff,#a296fd);                                              */
+  font-family: "Open Sans", sans-serif;
+  background: -webkit-linear-gradient(90deg, #ffffff,#e7e5ff,#cdc7ff);/* Chrome 10-25, Safari 5.1-6 */                          
+  background: linear-gradient(90deg, #ffffff,#e7e5ff,#cdc7ff);/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */                                             
 }
 
 .section {
   width: 100%; 
   display: flex; 
   justify-content: center; 
-}
+  }
 
 .form {
   width: 400px; 
   display: flex; 
   flex-direction: column;
   text-align: center;
-  border: 1px solid #000;
+  border: 2px solid #fff;
   border-radius: 10px;
   padding: 50px;
-  margin-top: 30px;
+  margin-top: 60px;
+  /* background-color: #f4f3fb; */
+  /* background-color: #e7e5ff; */
+  background-color: #fff;
+-webkit-box-shadow: 0px 2px 39px 13px rgba(205, 199, 255, 0.19);
+-moz-box-shadow: 0px 2px 39px 13px rgba(205, 199, 255, 0.19);
+box-shadow: 0px 2px 39px 13px rgba(205, 199, 255, 0.19);
 }
 
 .form__model {
@@ -44,7 +65,7 @@ button {
 
 .form-input {
   padding: 10px;
-  border: 1px solid #000;
+  border: 1px solid #cdc7ff;
   border-radius: 5px;
 }
 
