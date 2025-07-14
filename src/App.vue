@@ -2,9 +2,9 @@
   <div class="menu">
     <a class="menu__link" href="#/">Выдача</a> 
     <a class="menu__link" href="#/refundview">Возврат</a> 
-    <a class="menu__link" href="#/adddatabaseview">Добавить картридж в БД</a> 
+    <a class="menu__link" href="#/adddatabaseview">Добавить в БД</a> 
     <a class="menu__link" href="#/cartlistallview">База данных</a> 
-    <a class="menu__link" href="#/cartlistview">Картриджи, ожидающие заправку</a> 
+    <a class="menu__link" href="#/cartlistview">Картриджи,<br> ожидающие заправку</a> 
     <a class="menu__link" href="#/refillinglistview">Заправки</a> 
   </div>
    <component :is="currentView" />
@@ -41,19 +41,24 @@
 <style scoped>
   .menu {
     background-color: #fff;
-    /* background-color: #0066FF; */
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    /* align-items: center; */
     padding: 10px 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    padding: 20px;
     box-shadow: 0px 2px 39px 13px rgba(205, 199, 255, 0.19);
   }
 
   .menu__link {
-    /* color: #fff; */
     text-decoration: none;
     padding: 10px;
     display: inline-block;
-    font-size: 20px;
+    font-size: 17px;
     color: #000;
   }
 </style>
