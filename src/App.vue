@@ -1,50 +1,26 @@
 <template>
-  <div class="menu">
-    <a class="menu__link" href="#/">Выдача</a> 
-    <a class="menu__link" href="#/refundview">Возврат</a> 
-    <a class="menu__link" href="#/adddatabaseview">Добавить в БД</a> 
-    <a class="menu__link" href="#/cartlistallview">База данных</a> 
-    <a class="menu__link" href="#/cartlistview">Картриджи,<br> ожидающие заправку</a> 
-    <a class="menu__link" href="#/refillinglistview">Заправки</a> 
-  </div>
-   <component :is="currentView" />
+  <nav class="menu">
+    <RouterLink class="menu__link" to="/">Выдача</RouterLink>
+    <RouterLink class="menu__link" to="/refundview">Возврат</RouterLink>
+    <RouterLink class="menu__link" to="/adddatabaseview">Добавить в БД</RouterLink>
+    <RouterLink class="menu__link" to="/cartlistallview">База данных</RouterLink>
+    <RouterLink class="menu__link" to="/cartlistview">Картриджи,<br> ожидающие заправку</RouterLink>
+    <RouterLink class="menu__link" to="/refillinglistview">Заправки</RouterLink>
+  </nav>
+  <RouterView />
 </template>
 
 <script setup>
-  import HomeView from './views/HomeView.vue';
-  import AddDataBaseView from './views/AddDataBaseView.vue';
-  import CartListView from './views/CartListView.vue';
-  import RefillingListView from './views/RefillingListView.vue';
-  import CartListAllView from './views/CartListAllView.vue';
-  import RefundView from './views/RefundView.vue';
-  import { ref, computed } from 'vue'
-   const routes = {
-    '/': HomeView,
-    '/adddatabaseview': AddDataBaseView,
-    '/cartlistview': CartListView,
-    '/refillinglistview': RefillingListView,
-    '/cartlistallview': CartListAllView,
-    '/refundview': RefundView
-  }
-
-  const currentPath = ref(window.location.hash)
-
-  window.addEventListener('hashchange', () => {
-    currentPath.value = window.location.hash
-  })
-
-  const currentView = computed(() => {
-    return routes[currentPath.value.slice(1) || '/'] || NotFound
-  })
+  import { RouterView } from 'vue-router';
 </script>
 
 <style scoped>
   .menu {
+    transition: all .7s;
     background-color: #fff;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* align-items: center; */
     padding: 10px 0;
     position: absolute;
     left: 0;
@@ -59,6 +35,6 @@
     padding: 10px;
     display: inline-block;
     font-size: 17px;
-    color: #000;
+    color: #000; 
   }
 </style>
