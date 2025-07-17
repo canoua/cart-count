@@ -1,7 +1,7 @@
 <template>
   <div class="section">
     <form class="form" action="#">
-      <h2>Добавить картридж в базу данных</h2>
+      <h2>Добавить картридж</h2>
       <div class="form__model">
         <label for="model">Модель картриджа</label>
         <select name="model" id="model" >

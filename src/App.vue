@@ -2,7 +2,7 @@
   <nav class="menu">
     <RouterLink class="menu__link" to="/">Выдача</RouterLink>
     <RouterLink class="menu__link" to="/refundview">Возврат</RouterLink>
-    <RouterLink class="menu__link" to="/adddatabaseview">Добавить в БД</RouterLink>
+    <RouterLink class="menu__link" to="/adddatabaseview">Добавить картридж</RouterLink>
     <RouterLink class="menu__link" to="/cartlistallview">База данных</RouterLink>
     <RouterLink class="menu__link" to="/cartlistview">Картриджи,<br> ожидающие заправку</RouterLink>
     <RouterLink class="menu__link" to="/refillinglistview">Заправки</RouterLink>
