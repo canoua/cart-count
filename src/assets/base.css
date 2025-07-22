@@ -9,6 +9,7 @@ h1, h2 {
   margin-bottom: 10px;
 }
 
+input[type='submit'],
 button {
   background-color: #0066FF;
   color: #fff;

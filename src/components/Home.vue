@@ -13,7 +13,7 @@
       <input class="form-input" type="text" placeholder="штрихкод">
       <input class="form-input" type="text" placeholder="номер кабинета">
       <input class="form-input" type="text" placeholder="инвентарный номер принтера/МФУ">
-      <button class="form-btn" type="submit">выдать</button>
+      <input class="form-btn" type="submit" value="выдать">
     </form>
   </section>
 </template>

@@ -11,7 +11,7 @@
         </select>
       </div>
       <input class="form-input" type="text" placeholder="штрихкод">
-      <button class="form-btn" type="submit">добавить</button>
+      <input class="form-btn" type="submit" value="добавить">
     </form>
   </div>
 </template>
