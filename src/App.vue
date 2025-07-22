@@ -2,9 +2,9 @@
   <button class="btn-menu" @click="menuIsActive">меню</button>
   <nav class="menu" :class="{ 'open': menuActive }">
     <button @click="menuIsActive" class="btn-close">x</button>
-    <RouterLink class="menu__link" to="/">Выдача</RouterLink>
-    <RouterLink class="menu__link" to="/refundview">Возврат</RouterLink>
-    <RouterLink class="menu__link" to="/adddatabaseview">Добавить картридж</RouterLink>
+    <RouterLink class="menu__link" to="/">=> Выдача</RouterLink>
+    <RouterLink class="menu__link" to="/refundview"><= Возврат</RouterLink>
+    <RouterLink class="menu__link" to="/adddatabaseview">+ Добавить картридж</RouterLink>
     <RouterLink class="menu__link" to="/cartlistallview">База данных</RouterLink>
     <RouterLink class="menu__link" to="/cartlistview">Картриджи,<br> ожидающие заправку</RouterLink>
     <RouterLink class="menu__link" to="/refillinglistview">Заправки</RouterLink>
@@ -49,7 +49,7 @@
 
   .menu {
     position: relative;
-    transition: all .5s;
+    transition: .5s;
     background-color: #fff;
     display: flex;
     flex-direction: column;
@@ -65,6 +65,7 @@
 
   .menu.open {
     left: 0;
+    
   }
 
   .menu__link {
