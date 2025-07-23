@@ -9,6 +9,16 @@ h1, h2 {
   margin-bottom: 10px;
 }
 
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+}
+
 input[type='submit'],
 button {
   background-color: #0066FF;

@@ -2,17 +2,23 @@
   <button class="btn-menu" @click="menuIsActive">меню</button>
   <nav class="menu" :class="{ 'open': menuActive }">
     <button @click="menuIsActive" class="btn-close">x</button>
-    <RouterLink class="menu__link" to="/">=> Выдача</RouterLink>
+    <RouterLink class="menu__link" to="/">
+      <!-- <img :src="require('components/icons/add_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg')" alt="Описание изображения" /> -->
+      <!-- Выдача -->
+    </RouterLink>
     <RouterLink class="menu__link" to="/refundview"><= Возврат</RouterLink>
     <RouterLink class="menu__link" to="/adddatabaseview">+ Добавить картридж</RouterLink>
     <RouterLink class="menu__link" to="/cartlistallview">База данных</RouterLink>
     <RouterLink class="menu__link" to="/cartlistview">Картриджи,<br> ожидающие заправку</RouterLink>
     <RouterLink class="menu__link" to="/refillinglistview">Заправки</RouterLink>
   </nav>
-  <RouterView />
+  <Transition>
+    <RouterView />
+  </Transition>
 </template>
 
 <script>
+  // import IconAdd from './components/icons/IconAdd.vue';
   import { RouterView } from 'vue-router';
 
   export default {
