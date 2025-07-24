@@ -1,0 +1,22 @@
+<template>
+  <div>
+    <div v-for="(item, index) in items" :key="index" @click="handleClick(index)">
+      {{ item }}
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      items: ['Элемент 1', 'Элемент 2', 'Элемент 3']
+    };
+  },
+  methods: {
+    handleClick(index) {
+      console.log('Нажато:', this.items[index]);
+    }
+  }
+};
+</script>
