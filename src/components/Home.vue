@@ -20,6 +20,7 @@
 
 <script>
   import Input from './base/Input.vue';
+
   export default {
     data() {
       return {
