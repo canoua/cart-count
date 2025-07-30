@@ -1,27 +1,27 @@
 <template>
   <nav class="menu">
     <div @click="burgerClick" :class="{'active': burgerAnimation}" class="burger"></div>
-    <RouterLink class="menu__link" to="/">
+    <RouterLink class="menu__link" :to="{name: 'homeview'}">
       <img height="100%" src='/return.png' alt="refund" />
       <span :class="{ 'open': menuLinkActive }" class="menu__link__text">Выдача</span>
     </RouterLink>
-    <RouterLink class="menu__link" to="/refundview">
+    <RouterLink class="menu__link" :to="{name: 'refundview'}" >
       <img height="100%" src='/refund.png' alt="refund" />
       <span :class="{ 'open': menuLinkActive }" class="menu__link__text">Возврат</span>
     </RouterLink>
-    <RouterLink class="menu__link" to="/adddatabaseview">
+    <RouterLink class="menu__link" :to="{name: 'adddatabaseview'}">
       <img height="100%" src='/add.png' alt="add" />
       <span :class="{ 'open': menuLinkActive }" class="menu__link__text">Добавить картридж</span>
     </RouterLink>
-    <RouterLink class="menu__link" to="/cartlistallview">
+    <RouterLink class="menu__link" :to="{name: 'cartlistallview'}">
       <img height="100%" src='/db.png' alt="db" />
       <span :class="{ 'open': menuLinkActive }" class="menu__link__text">БД</span>
     </RouterLink>
-    <RouterLink class="menu__link" to="/cartlistview">
+    <RouterLink class="menu__link" :to="{name: 'cartlistview'}">
       <img height="100%" src='/list.png' alt="list" />
       <span :class="{ 'open': menuLinkActive }" class="menu__link__text">Ожидание заправки</span>
     </RouterLink>
-    <RouterLink class="menu__link" to="/refillinglistview">
+    <RouterLink class="menu__link" :to="{name: 'refillinglistview'}">
       <img height="100%" src='/refilling.png' alt="refilling" />
       <span :class="{ 'open': menuLinkActive }" class="menu__link__text">Заправки</span>
     </RouterLink>
@@ -93,10 +93,12 @@
     border-radius: 10px;
     background-color: #0066FF;
   }
+
   .burger::before {
     top: 0;
     box-shadow: 0 11px 0 #0066FF;;
   }
+  
   .burger::after {
     bottom: 0;
   }
