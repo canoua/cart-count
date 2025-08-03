@@ -6,3 +6,26 @@
 ***
 добавить иконки на сайдбаре
 сайдбар скрыт, видно иконки каждого пункта меню, кликаем на кнопку меню - сайдбар открывается
+***
+вывод пунктов меню в цикле
+<template>
+  <div>
+    <router-link
+      v-for="route in routes"
+      :key="route.path"
+      :to="route.path"
+    >
+      {{ route.name }}
+    </router-link>
+  </div>
+</template>
+
+<script>
+export default {
+  computed: {
+    routes() {
+      return this.$router.options.routes;
+    }
+  }
+};
+</script>

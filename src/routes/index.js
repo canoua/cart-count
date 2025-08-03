@@ -12,31 +12,43 @@ const router = createRouter({
     {
       path: '/',
       name: 'homeview',
+      title: 'Выдача',
+      icon: '/return.png',
       component: HomeView
     },
     {
       path: '/adddatabaseview',
       name: 'adddatabaseview',
+      title: 'Добавить в БД',
+      icon: '/add.png',
       component: AddDataBaseView
     },
     {
       path: '/cartlistallview',
       name: 'cartlistallview',
+      title: 'База данных',
+      icon: '/db.png',
       component: CartListAllView
     },
     {
       path: '/cartlistview',
       name: 'cartlistview',
+      title: 'Ожидание заправки',
+      icon: '/list.png',
       component: CartListView
     },
     {
       path: '/refillinglistview',
       name: 'refillinglistview',
+      title: 'Заправки',
+      icon: '/refilling.png',
       component: RefillingListView
     },
     {
       path: '/refundview',
       name: 'refundview',
+      title: 'Возврат',
+      icon: '/refund.png',
       component: RefundView
     }
   ]

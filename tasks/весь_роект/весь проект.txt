@@ -13,25 +13,3 @@
 добавить библиотеку которая сканирует штрихкод - добавляет в инпут штрихкод и подтягивает модель из базы данных. если его нет - добавить в бд
 если некогда - загрузить фотку с инфой
 ***
-вывод пунктов меню в цикле
-<template>
-  <div>
-    <router-link
-      v-for="route in routes"
-      :key="route.path"
-      :to="route.path"
-    >
-      {{ route.name }}
-    </router-link>
-  </div>
-</template>
-
-<script>
-export default {
-  computed: {
-    routes() {
-      return this.$router.options.routes;
-    }
-  }
-};
-</script>
