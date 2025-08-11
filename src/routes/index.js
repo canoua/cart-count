@@ -17,6 +17,13 @@ const router = createRouter({
       component: HomeView
     },
     {
+      path: '/refundview',
+      name: 'refundview',
+      title: 'Возврат',
+      icon: '/refund.png',
+      component: RefundView
+    },
+    {
       path: '/adddatabaseview',
       name: 'adddatabaseview',
       title: 'Добавить в БД',
@@ -43,13 +50,6 @@ const router = createRouter({
       title: 'Заправки',
       icon: '/refilling.png',
       component: RefillingListView
-    },
-    {
-      path: '/refundview',
-      name: 'refundview',
-      title: 'Возврат',
-      icon: '/refund.png',
-      component: RefundView
     }
   ]
 })

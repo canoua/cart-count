@@ -1,10 +1,10 @@
 <template>
   <div class="section">
-    <div class="form">
+    <form class="form" action="">
       <h2>Возврат</h2>
       <Input placeholder="Штрихкод"/>
       <input class="form-btn" type="submit" value="возврат">
-    </div>
+    </form>
   </div>
 </template>
 

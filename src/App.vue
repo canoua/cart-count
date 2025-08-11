@@ -133,12 +133,14 @@
   }
   .burger.active::before {
     top: 11px;
+    background: red;
     transform: rotate(45deg);
     box-shadow: 0 6px 0 rgba(0,0,0,0);
     transition: box-shadow .15s, top .3s, transform .3s .15s;
   }
   .burger.active::after {
     bottom: 11px;
+    background: red;
     transform: rotate(-45deg);
     transition: bottom .3s, transform .3s .15s;
   }
