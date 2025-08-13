@@ -1,7 +1,7 @@
 <template>
   <div class="input-wrapper">
     <p :class="{'input-placeholder_active': inputActive}" class="input-placeholder">{{ placeholder }}</p>
-    <input @focus="placeholderToggle" v-on:blur="placeholderToggle" class="form-input" type="text">
+    <input @focus="placeholderToggle" v-model="inputValue" v-on:blur="placeholderToggle" class="form-input" type="text">
   </div> 
 </template>
 
@@ -15,12 +15,15 @@
     },
     data() {
       return {
-        inputActive: false
+        inputActive: false,
+        inputValue: ''
       }
     },
     methods: {
       placeholderToggle() {
-        this.inputActive = !this.inputActive;
+        if(this.inputValue=='') {
+          this.inputActive = !this.inputActive;
+        }
       }
     }
   }
